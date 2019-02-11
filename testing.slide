@@ -1,0 +1,81 @@
+Testing
+
+* go test
+
+PASS
+ok      gouploadd       1.683s
+
+go test ./...
+go test -v
+
+* testing
+
+.code 01-import-testing.go /START OMIT/,/END OMIT/
+
+* files naming
+
+image_test.go
+pf_notify_test.go
+handler_internal_test.go
+
+* functions naming
+
+.code 02-function-naming.go /START OMIT/,/END OMIT/
+
+* package naming
+
+.code 03-package-naming.go /START OMIT/,/END OMIT/
+
+* let's Go
+
+.play -numbers simple/04-simple-function.go /START OMIT/,/END OMIT/
+
+* let's Test
+
+.code -numbers simple/05-simple_test.go /START OMIT/,/END OMIT/
+
+* let's TestTable
+
+.code -numbers simple/06-test-cases_test.go /START OMIT/,/END OMIT/
+
+* Subtests
+
+.code -numbers simple/07-subtests_test.go /START OMIT/,/END OMIT/
+
+* Do not be perpendicular
+
+.code -numbers simple/08-parallel_test.go /START OMIT/,/END OMIT/
+
+* Helper functions
+
+.code -numbers simple/09-helper_test.go /START OMIT/,/END OMIT/
+
+* Skip (шкіп)
+
+.code -numbers simple/10-skip_test.go /START OMIT/,/END OMIT/
+
+* Cover
+
+go test -cover
+
+coverage: 75.8% of statements
+exit status 1
+FAIL    gouploadd       1.502s
+
+* Coverprofile
+
+go test -coverprofile=coverage.out
+
+go tool cover -html=coverage.out -o coverage.html
+
+* Benchmark
+
+.code -numbers simple/11-benchmark_test.go /START OMIT/,/END OMIT/
+
+* How to test this code?
+
+.code -numbers simple/12-example_test.go /START OMIT/,/END OMIT/
+
+* Generate tests
+
+* Some technics
